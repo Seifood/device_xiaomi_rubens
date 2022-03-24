@@ -1,13 +1,13 @@
 #
 # Copyright (C) 2020 The Android Open Source Project
-# Copyright (C) 2020 PitchBlack Recovery Project
-# Copyright (C) 2021 OrangeFox Recovery Project
+# Copyright (C) 2020 The TWRP Open Source Project
+# Copyright (C) 2020 SebaUbuntu's TWRP device tree generator
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-# http://www.apache.org/licenses/LICENSE-2.0
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -17,6 +17,9 @@
 #
 
 LOCAL_PATH := device/xiaomi/rubens
+PRODUCT_RELEASE_NAME := rubens
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # A/B
 AB_OTA_PARTITIONS += \
     boot \
@@ -36,10 +39,15 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-service
 
 PRODUCT_PACKAGES += \
-    bootctrl.kona \
-    libgptutils \
-    libz \
-    libcutils
+    bootctrl.mt6895
+
+# OEM otacert
+PRODUCT_EXTRA_RECOVERY_KEYS += \
+    vendor/recovery/security/miui
+
+# Stock flashable zips
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.allow.mock.location=1
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
@@ -47,3 +55,7 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_verifier \
     update_engine_sideload
+
+# HACK: Set vendor patch level
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.build.security_patch=2099-12-31
