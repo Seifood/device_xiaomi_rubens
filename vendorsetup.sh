@@ -99,7 +99,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         #Maintainer Stuff
         export OF_MAINTAINER="hank9999"
         export FOX_BUILD_TYPE="Dev"
-        export FOX_VERSION="R11.1_0.1"
+        export FOX_VERSION="R11.1_0.2"
 
 	# Let's see which are our build vars
     if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
