@@ -138,10 +138,10 @@ TARGET_NO_RECOVERY := true
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 
 # Treble
-BOARD_VNDK_VERSION := 31
+BOARD_VNDK_VERSION := current
 
 # TWRP specific build flags
-TW_THEME := portrait_xxhdpi
+TW_THEME := portrait_hdpi
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
 RECOVERY_SDCARD_ON_DATA := true
 TW_INCLUDE_RESETPROP := true
