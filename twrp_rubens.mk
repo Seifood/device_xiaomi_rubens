@@ -29,7 +29,7 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 PRODUCT_DEVICE := rubens
 PRODUCT_NAME := twrp_rubens
 PRODUCT_BRAND := Redmi
-PRODUCT_MODEL := Redmi K50
+PRODUCT_MODEL := 22041211AC
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_RELEASE_NAME := Redmi K50
 
