@@ -16,3 +16,5 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/twrp_rubens.mk
+
+COMMON_LUNCH_CHOICES := twrp_zeus-eng
